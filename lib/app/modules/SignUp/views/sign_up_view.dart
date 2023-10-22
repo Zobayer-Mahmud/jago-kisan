@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:jago_kisan/common/app_const/app_colors.dart';
 import 'package:jago_kisan/common/app_const/app_dimes.dart';
 import 'package:jago_kisan/common/widget/back_ground_card/back_ground_card.dart';
 import 'package:jago_kisan/common/widget/text_widget/regulat_text_widget.dart';
@@ -21,43 +22,63 @@ class SignUpView extends GetView<SignUpController> {
           right: AppDimes.regularPadding,
         ),
         children: [
-          RegularTextWidget(
+          const RegularTextWidget(
             textAlign: TextAlign.center,
             fontWeight: FontWeight.bold,
             text: 'Create Account',
             color: Colors.black,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          const SizedBox(height: AppDimes.regularPadding),
           SignUpTextWidget(
             textEditingController: controller.fullName,
             hintText: "Full Name",
             icon: Icons.person,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          // const SizedBox(height: 0),
           SignUpTextWidget(
             textEditingController: controller.fullName,
             hintText: "Email Address",
             icon: Icons.person,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          // const SizedBox(height: 0),
           SignUpTextWidget(
             textEditingController: controller.fullName,
             hintText: "Phone Number",
             icon: Icons.person,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          // const SizedBox(height: 0),
           SignUpTextWidget(
             textEditingController: controller.fullName,
             hintText: "Password",
             icon: Icons.person,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          // const SizedBox(height: 0),
           SignUpTextWidget(
             textEditingController: controller.fullName,
             hintText: "Confirm Password",
             icon: Icons.person,
           ),
-          SizedBox(height: AppDimes.regularPadding),
+          Center(
+            child: InkWell(
+              onTap: controller.signUp,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.6,
+                decoration: BoxDecoration(
+                  color: AppColors.themeColor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: const RegularTextWidget(
+                  text: "NEXT",
+                  color: Colors.black,
+                  textAlign: TextAlign.center,
+                  fontSize: AppDimes.FONT_SIZE_LEARGE,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          )
+          // const SizedBox(height: 0),
         ],
       ),
     );
