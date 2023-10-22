@@ -65,13 +65,13 @@ class LoginView extends GetView<LoginController> {
                   color: Colors.white,
                 ),
                 const SizedBox(height: 10),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconWidget(iconImageUrl: AppAssets.fb),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
                     IconWidget(iconImageUrl: AppAssets.google),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
                     IconWidget(iconImageUrl: AppAssets.twitter),
                   ],
                 )
