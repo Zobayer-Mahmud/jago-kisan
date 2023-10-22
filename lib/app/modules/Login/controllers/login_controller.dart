@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:jago_kisan/app/routes/app_pages.dart';
 
 class LoginController extends GetxController {
   //TODO: Implement LoginController
@@ -8,6 +9,11 @@ class LoginController extends GetxController {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passWordController = TextEditingController();
+
+  logIn() {
+    Get.toNamed(Routes.SIGN_UP);
+  }
+
   @override
   void onInit() {
     super.onInit();

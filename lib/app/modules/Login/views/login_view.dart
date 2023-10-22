@@ -79,59 +79,25 @@ class LoginView extends GetView<LoginController> {
             ),
           ),
           Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.6,
-              decoration: BoxDecoration(
-                color: AppColors.themeColor,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              clipBehavior: Clip.hardEdge,
-              child: const RegularTextWidget(
-                text: "LOGIN",
-                color: Colors.black,
-                textAlign: TextAlign.center,
-                fontSize: AppDimes.FONT_SIZE_LEARGE,
-                fontWeight: FontWeight.w700,
+            child: InkWell(
+              onTap: controller.logIn,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.6,
+                decoration: BoxDecoration(
+                  color: AppColors.themeColor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: const RegularTextWidget(
+                  text: "LOGIN",
+                  color: Colors.black,
+                  textAlign: TextAlign.center,
+                  fontSize: AppDimes.FONT_SIZE_LEARGE,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           )
-
-          // Image.asset(
-          //   AppAssets.paddyField,
-          //   height: MediaQuery.of(context).size.height * 0.5,
-          //   width: double.infinity,
-          //   fit: BoxFit.contain,
-          // ),
-          // const RegularTextWidget(
-          //   text: "Without Agriculture we can’t survive on this planet",
-          //   fontSize: AppDimes.FONT_SIZE_LEARGE,
-          //   fontWeight: FontWeight.w700,
-          //   textAlign: TextAlign.center,
-          // ),
-          // const SizedBox(
-          //   height: AppDimes.regularPadding,
-          // ),
-          // InkWell(
-          //   onTap: controller.onGetStarted,
-          //   child: Container(
-          //     padding: const EdgeInsets.all(AppDimes.regularPadding),
-          //     margin: const EdgeInsets.all(AppDimes.regularPadding),
-          //     width: double.infinity,
-          //     height: MediaQuery.of(context).size.height * 0.08,
-          //     decoration: const BoxDecoration(
-          //       image: DecorationImage(
-          //         image: AssetImage(AppAssets.getStarted),
-          //       ),
-          //     ),
-          //     child: const RegularTextWidget(
-          //       text: "Get Started",
-          //       color: Colors.black,
-          //       fontSize: AppDimes.FONT_SIZE_LEARGE,
-          //       textAlign: TextAlign.center,
-          //       fontWeight: FontWeight.bold,
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
