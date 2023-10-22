@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:jago_kisan/app/routes/app_pages.dart';
 import 'package:jago_kisan/utilities/initial_binding.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff31F920)),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
