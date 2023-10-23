@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:jago_kisan/app/routes/app_pages.dart';
 
 class SignUpController extends GetxController {
   TextEditingController fullName = TextEditingController();
@@ -12,7 +13,10 @@ class SignUpController extends GetxController {
 
   final count = 0.obs;
 
-  void signUp() {}
+  void signUp() {
+    Get.toNamed(Routes.SEARCH_VIEW);
+  }
+
   @override
   void onInit() {
     super.onInit();

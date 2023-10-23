@@ -5,8 +5,9 @@ import 'package:jago_kisan/common/app_const/app_assets.dart';
 import 'package:jago_kisan/common/app_const/app_colors.dart';
 import 'package:jago_kisan/common/app_const/app_dimes.dart';
 import 'package:jago_kisan/common/widget/back_ground_card/back_ground_card.dart';
+import 'package:jago_kisan/common/widget/button/commonButton.dart';
 import 'package:jago_kisan/common/widget/icon_widget/icon_widget.dart';
-import 'package:jago_kisan/common/widget/text_form_field_widget.dart';
+import 'package:jago_kisan/common/widget/text_form_field/text_form_field_widget.dart';
 import 'package:jago_kisan/common/widget/text_widget/regulat_text_widget.dart';
 
 import '../controllers/login_controller.dart';
@@ -52,11 +53,14 @@ class LoginView extends GetView<LoginController> {
                   isObscure: true,
                   icon: Icons.person,
                 ),
-                const Align(
+                Align(
                   alignment: Alignment.topRight,
-                  child: RegularTextWidget(
-                    text: "Forgot password?",
-                    color: Colors.white,
+                  child: InkWell(
+                    onTap: controller.routeToForgetPassword,
+                    child: const RegularTextWidget(
+                      text: "Forgot password?",
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 const SizedBox(height: AppDimes.FONT_SIZE_LEARGE),
@@ -78,26 +82,7 @@ class LoginView extends GetView<LoginController> {
               ],
             ),
           ),
-          Center(
-            child: InkWell(
-              onTap: controller.logIn,
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.6,
-                decoration: BoxDecoration(
-                  color: AppColors.themeColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                clipBehavior: Clip.hardEdge,
-                child: const RegularTextWidget(
-                  text: "LOGIN",
-                  color: Colors.black,
-                  textAlign: TextAlign.center,
-                  fontSize: AppDimes.FONT_SIZE_LEARGE,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          )
+          CommonButton(onTap: controller.logIn, title: "LOGIN")
         ],
       ),
     );

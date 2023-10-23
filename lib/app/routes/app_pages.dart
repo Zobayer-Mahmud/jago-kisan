@@ -4,6 +4,8 @@ import '../modules/FarmingCard/bindings/farming_card_binding.dart';
 import '../modules/FarmingCard/views/farming_card_view.dart';
 import '../modules/FarmingDetails/bindings/farming_details_binding.dart';
 import '../modules/FarmingDetails/views/farming_details_view.dart';
+import '../modules/ForgetPassword/bindings/forget_password_binding.dart';
+import '../modules/ForgetPassword/views/forget_password_view.dart';
 import '../modules/Home/bindings/home_binding.dart';
 import '../modules/Home/views/home_view.dart';
 import '../modules/Login/bindings/login_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.FARMING_CARD,
       page: () => const FarmingCardView(),
       binding: FarmingCardBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGET_PASSWORD,
+      page: () => const ForgetPasswordView(),
+      binding: ForgetPasswordBinding(),
     ),
   ];
 }

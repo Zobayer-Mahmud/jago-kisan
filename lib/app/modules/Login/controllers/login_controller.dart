@@ -10,6 +10,10 @@ class LoginController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passWordController = TextEditingController();
 
+  void routeToForgetPassword() {
+    Get.toNamed(Routes.FORGET_PASSWORD);
+  }
+
   logIn() {
     Get.toNamed(Routes.SIGN_UP);
   }

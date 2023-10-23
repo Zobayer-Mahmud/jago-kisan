@@ -1,7 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class SearchViewController extends GetxController {
   //TODO: Implement SearchViewController
+  TextEditingController searchController = TextEditingController();
+  onSearchClear() {
+    searchController.text = '';
+    update();
+  }
 
   final count = 0.obs;
   @override

@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 import 'package:jago_kisan/common/app_const/app_colors.dart';
 import 'package:jago_kisan/common/app_const/app_dimes.dart';
 import 'package:jago_kisan/common/widget/back_ground_card/back_ground_card.dart';
+import 'package:jago_kisan/common/widget/button/commonButton.dart';
 import 'package:jago_kisan/common/widget/text_widget/regulat_text_widget.dart';
-import 'package:jago_kisan/common/widget/text_widget/sign_up_text_widget.dart';
+import 'package:jago_kisan/common/widget/text_form_field/sign_up_text_widget.dart';
 
 import '../controllers/sign_up_controller.dart';
 
@@ -58,26 +59,7 @@ class SignUpView extends GetView<SignUpController> {
             hintText: "Confirm Password",
             icon: Icons.person,
           ),
-          Center(
-            child: InkWell(
-              onTap: controller.signUp,
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.6,
-                decoration: BoxDecoration(
-                  color: AppColors.themeColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                clipBehavior: Clip.hardEdge,
-                child: const RegularTextWidget(
-                  text: "NEXT",
-                  color: Colors.black,
-                  textAlign: TextAlign.center,
-                  fontSize: AppDimes.FONT_SIZE_LEARGE,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          )
+          CommonButton(onTap: controller.signUp, title: "Sign Up")
           // const SizedBox(height: 0),
         ],
       ),

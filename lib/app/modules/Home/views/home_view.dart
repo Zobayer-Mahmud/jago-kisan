@@ -40,7 +40,7 @@ class HomeView extends GetView<HomeController> {
           ),
           const RegularTextWidget(
             text: "Without Agriculture we can’t survive on this planet",
-            fontSize: AppDimes.FONT_SIZE_LEARGE,
+            fontSize: AppDimes.FONT_SIZE_REGULAR,
             fontWeight: FontWeight.w700,
             textAlign: TextAlign.center,
           ),

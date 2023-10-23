@@ -9,6 +9,7 @@ abstract class Routes {
   static const SEARCH_VIEW = _Paths.SEARCH_VIEW;
   static const HOME = _Paths.HOME;
   static const FARMING_CARD = _Paths.FARMING_CARD;
+  static const FORGET_PASSWORD = _Paths.FORGET_PASSWORD;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const SEARCH_VIEW = '/search-view';
   static const HOME = '/home';
   static const FARMING_CARD = '/farming-card';
+  static const FORGET_PASSWORD = '/forget-password';
 }
